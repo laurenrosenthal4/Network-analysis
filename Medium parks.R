@@ -16,8 +16,3 @@ mediumparks <- allparks %>%
   filter(parkarea >= 100000)
 
 mediumparks_centroids %>%
-  
-  
-  
-  
-

@@ -3,7 +3,7 @@ library(rgdal)
 
 find_census_vectors()
 find_census_vectors("population", "CA21", type = "all", query_type = "keyword"
-  )
+)
 
 list_census_regions("CA16") %>%
   filter(level == "CSD", name == "Montréal") %>%
@@ -15,10 +15,10 @@ list_census_vectors("CA21") %>%
 
 
 population_mtl_DA <- get_census(dataset = "CA21",
-                             regions = r,
-                             vector = population,
-                             level = "DA",
-                             geo_format = "sf")
+                                regions = r,
+                                vector = population,
+                                level = "DA",
+                                geo_format = "sf")
 
 population_DA_filtered <- population_mtl_DA %>%
   filter(Population > 0)
@@ -67,4 +67,3 @@ tm_shape(population_mtl_DA)+
   tm_borders(col = "black")+
   tm_shape(xy)+
   tm_dots()
-
