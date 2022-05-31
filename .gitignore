@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 /Test
+.Rdata
+.httr-oauth
+.DS_Store
+/Parks

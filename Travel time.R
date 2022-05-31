@@ -4,7 +4,7 @@ library(cancensus)
 library(tmap)
 library(sf)
 
-options(cancensus.cache_path = getwd()) # This will use our working directory as the folder where it will cache the data from cancensus. 
+options(cancensus.cache_path = paste(getwd(),"/Test",sep="")) # This will use our working directory as the folder where it will cache the data from cancensus. 
 options(cancensus.api_key = "CensusMapper_49272a61659f167722512e80b3dd8e3c")
 
 rm(list = ls())
@@ -172,6 +172,8 @@ ttm_ct_allmodes_allparks_evening <- travel_time_matrix(r5r_core = r5r_core,
 ##### Mapping CT scale - all parks #####
 
 # Pulling census geometries
+
+
 
 list_census_vectors("CA16") %>%
   filter(str_detect(label, "Land area in square kilometers")) %>%
@@ -404,5 +406,5 @@ ggplot(tenantratio, aes(x = tenantratio, y = min_travel_time))+
   geom_point()+
   geom_smooth()
 
-
-
+usethis::use_github()
+install.packages("usethis")
