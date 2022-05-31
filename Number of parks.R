@@ -155,3 +155,4 @@ median_income_mtl_DA <- median_income_mtl_DA[c(5, 15)]
 st_drop_geometry(median_income_mtl_DA)
 as.data.frame(median_income_mtl_DA)
 
+
